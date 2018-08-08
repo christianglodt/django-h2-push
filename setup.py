@@ -16,7 +16,7 @@ setup(
     author_email="anthony.king@fundingoptions.com",
     license="GPLv3",
     url="https://github.com/FundingOptions/django-h2-push",
-    packages=['django_h2_push'],
+    packages=['django_h2_push', 'django_h2_push.templatetags'],
     install_requires=[],
     classifiers=[
         "Development Status :: 1 - Planning",
