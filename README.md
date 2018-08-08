@@ -9,7 +9,7 @@ In the template, add new prefetches with
 ```html
 <html>
 <body>
-<img src="{% pushed_static 'my_image.png' %}"/>
+<img src="{% pushed_static 'my_image.png' preload_as image %}"/>
 </body>
 </html>
 ```
@@ -27,6 +27,5 @@ it will render to
 and add the link headers in the middleware:
 
 ```
-Link: "<my_image.png>; rel=preload"
+Link: "<my_image.png>; as=image; rel=preload"
 ```
-
