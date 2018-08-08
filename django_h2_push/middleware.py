@@ -1,8 +1,8 @@
 from django.utils.deprecation import MiddlewareMixin
 
-def _build_header(asset_names):
-    asset_template = "<{asset_name}>; rel=preload"
-    return ", ".join(asset_template.format(asset_name=asset_name) for asset_name in asset_names)
+def _build_header(assets):
+    asset_template = '<{asset_name}>; as={preload_as}; rel=preload'
+    return ", ".join(asset_template.format(asset_name=asset_name, preload_as=preload_as) for asset_name, preload_as in assets)
 
 class H2PushMiddleware(MiddlewareMixin):
 
